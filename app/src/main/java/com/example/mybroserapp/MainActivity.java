@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private WebView myWebView;
-    private EditText urlText;
+    private TextView urlText;
 
     private static final String INITIAL_WEBSITE = "http://dotinstall.com";
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myWebView = (WebView) findViewById(R.id.myWebView);
-        urlText = (EditText) findViewById(R.id.urlText);
+        urlText = (TextView) findViewById(R.id.urlText);
 
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient() {
