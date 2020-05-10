@@ -12,20 +12,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/urlText"
+            android:inputType="text|textNoSuggestions"
+            android:onClick="urlClear"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </TextView>
+        </EditText>
 
         <Button
             android:text="Browse"
+            android:onClick="showWebsite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
